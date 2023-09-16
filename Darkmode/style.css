@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: end;
+}
+
+.button{
+    background: rgb(102, 69, 167);
+    width: 15em;
+    height: 8em;
+    border-radius: 10em;
+    box-shadow: inset 8px 60px rgba(0, 0,0,.1),
+                inset 0 8px 8px rgba(0, 0,0,.1),
+                inset 0 -4px 4px rgba(0, 0,0,.1);
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.button_indicator{
+    
+    background-color:white;
+    height: 7em;
+    width: 7em;
+    border-radius: 50%;
+    box-shadow: 0 8px 40px rgba(0,0,0,.2);
+    transition: transform 0.3s ease;
+}
+.icon_container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon{
+    color:  orange;
+    font-size: 3rem;
+}
+
+.icon.animated{
+    animation: spin 0.5s;
+}
+@keyframes spin{
+    to{
+        transform: rotate(360deg);
+    }
+}
+body.darkmode{
+    background-color: black;
+    /* color: aliceblue; */
+}
+.darkmode .button_indicator{
+    box-shadow: inset 8px 60px rgba(0, 0,0,.3),
+                inset 8px 0 8px rgba(0, 0,0,.3),
+                inset 0 -4px 4px rgba(0, 0,0,.3);
+}
+.darkmode .button_indicator{
+    transform: translateX(7em);
+    background-color: black;
+    box-shadow: inset 8px 40px rgba(0, 0,0,.3),
+}
+.darkmode .icon{
+    color: aliceblue;
+}
